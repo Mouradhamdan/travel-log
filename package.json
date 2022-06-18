@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client",
+    "e2e"
+  ],
+  "scripts": {
+    "build:client": "yarn workspace Travel-Journal-client build",
+    "dev": "yarn workspace Travel-Journal-server dev",
+    "dev:debug": "yarn workspace Travel-Journal-server dev:debug",
+    "heroku-postbuild": "yarn workspace Travel-Journal-client build",
+    "start": "yarn workspace Travel-Journal-server start",
+    "dev:cypress": "yarn workspace Travel-Journal-server dev:e2e",
+    "e2e:open": "yarn workspace Travel-Journal-e2e e2e:open",
+    "e2e:run": "yarn workspace Travel-Journal-e2e e2e:run"
+  },
+  "engines": {
+    "node": "^14.19"
+  }
+}
