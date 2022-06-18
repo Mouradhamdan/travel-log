@@ -15,8 +15,8 @@ class LogEntry extends Model {
         city: { type: "string" },
         startDate: { type: "string" },
         endDate: { type: "string" },
-        longitude: { type: "number" },
-        latitude: { type: "number" },
+        longitude: { type: "string" },
+        latitude: { type: "string" },
         images: { type: "string" },
       },
     };

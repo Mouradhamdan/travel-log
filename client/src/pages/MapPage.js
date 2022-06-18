@@ -110,6 +110,7 @@ const MapPage = (props) => {
           width: "100vw",
         }}
         center={destination}
+        zoom={[2]}
         onClick={() => {
           if (userId) {
             setSelectedLogEntry(undefined);
