@@ -27,4 +27,4 @@ Desktop.ini
 
 # ignore public upload folder
 
-**/public/uploads
+**/public/uploads/**

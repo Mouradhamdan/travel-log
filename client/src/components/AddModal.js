@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import config from "../config";
 
 const AddModal = (props) => {
   const { data, onClose, onSearch, onSubmit } = props;
@@ -161,7 +162,13 @@ const AddModal = (props) => {
                     <div
                       onClick={() => {
                         //TODO: read file path from env or conf or window.localtion
-                        window.open(`http://localhost:3000/uploads/${image}`);
+                        window.open(
+                          `${
+                            config.nodeEnv === "development"
+                              ? "http://localhost:3000"
+                              : "https://murad-travel-journal.herokuapp.com"
+                          }/uploads/${image}`
+                        );
                       }}
                       key={image}
                       style={{
@@ -169,7 +176,11 @@ const AddModal = (props) => {
                         display: "inline-block",
                         width: "120px",
                         height: "120px",
-                        backgroundImage: `url('http://localhost:3000/uploads/${image}')`,
+                        backgroundImage: `url(${
+                          config.nodeEnv === "development"
+                            ? "http://localhost:3000"
+                            : "https://murad-travel-journal.herokuapp.com"
+                        }/uploads/${image})`,
                         backgroundSize: "cover",
                         backgroundPosition: "50% 50%",
                       }}
